@@ -1,0 +1,85 @@
+
+
+.tracks {
+    display: flex;
+    flex: 1 auto;
+    flex-direction: column;
+}
+
+.list {
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.wrapper {
+    overflow: scroll;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.table {
+    min-width: 1200px;
+    color: darken($color-white, 20);
+    margin: 0;
+    a {
+        text-decoration: none;
+        color: inherit;
+        &:hover { color: $color-white }
+    }
+    thead {
+        background: $color-theme-two;
+        svg {
+            position: absolute;
+            top: 0.25rem;
+            right: 0.5rem;
+        }
+        th {
+            cursor: pointer;
+            position: relative;
+            white-space: nowrap;
+            border: 1px solid darken($color-theme-two, 3);
+            border-top: none;
+            font-weight: normal;
+            padding-right: 2rem;
+            &:hover {
+                background: darken($color-theme-two, 1);
+            }
+            &.sort {
+                background: darken($color-theme-two, 2);
+            }
+            &:first-child {
+                border-left: none;
+            }
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+    th, td {
+        margin: 0.1rem;
+        padding: 0 1rem;
+        border: none;
+    }
+    tbody tr {
+        background: darken($color-theme-two, 3);
+    }
+    tbody tr:nth-child(odd) {
+        background: darken($color-theme-two, 5);
+    }
+    .thumbnail {
+        width: 1%;
+        margin: 0;
+        vertical-align: bottom;
+        img { max-width: 60px; display: block }
+    }
+}
+
+.information {
+    flex: 0 0 auto;
+    text-align: center;
+    border-top: 1px solid darken($color-theme-two, 3);
+    background: $color-theme-two;
+}

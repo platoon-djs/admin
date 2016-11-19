@@ -1,0 +1,26 @@
+.header {
+    margin: 2rem 4rem 1rem;
+    display: flex;
+    border-bottom: 1px solid $color-theme-three;
+
+    .icon {
+        margin-right: $gutter-width;
+        svg {
+            color: $color-blue;
+            width: 2.5rem;
+            height: 2.5rem
+        }
+    }
+
+    .title {
+        font-weight: normal;
+    }
+}
+
+.content {
+    padding: $gutter-width 4rem;
+}
+
+.title {
+    color: $color-white;
+}

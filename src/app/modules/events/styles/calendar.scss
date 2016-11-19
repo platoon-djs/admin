@@ -1,0 +1,15 @@
+
+
+.calendar {
+    min-height: 800px;
+
+    button {
+        @include button($color-white, $color-theme-three);
+        border-color: $color-theme-two
+    }
+
+    a:hover {
+        color: $color-blue;
+    }
+}
+

@@ -1,0 +1,42 @@
+
+
+.music {
+    background: $color-white;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.content {
+    flex: 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.left {
+    background: $color-theme-three;
+    border-right: 1px solid darken($color-theme-three, 2);
+    flex: 0 200px;
+}
+.right {
+    background: $color-theme-three;
+    border-left: 1px solid darken($color-theme-three, 2);
+    flex: 0 200px;
+}
+
+.top {
+    flex: 0 auto;
+    min-height: 5rem;
+    background: $color-theme-two;
+    border-bottom: 1px solid darken($color-theme-two, 3);
+}
+
+.brand-logo {
+    padding: $half-spacing-unit $base-spacing-unit;
+    margin-bottom: $half-spacing-unit;
+    background: $color-primary;
+    color: lighten($color-primary, 50);
+    font-weight: bold;
+}
+

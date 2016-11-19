@@ -1,0 +1,57 @@
+$bg-color: $color-theme-three;
+$fg-color: lighten($color-theme-three, 15);
+
+.login {
+    background: $bg-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: $gutter-width;
+}
+
+.box {
+    flex: 0 400px;
+    text-align: center;
+    color: $fg-color;
+
+    h4 {
+        color: $fg-color;
+        font-weight: normal;
+    }
+}
+
+.form {
+    .input {
+        width: 100%;
+    }
+    text-align: left;
+}
+
+.button {
+    @include button($fg-color, darken($bg-color, 5));
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin-bottom: $half-gutter-width;
+
+    svg {
+        float: right;
+        height: 1rem;
+    }
+}
+
+.password {
+    position: relative;
+    display: block;
+    margin: $gutter-width 0;
+
+    a {
+        color: $color-primary;
+        text-decoration: none;
+        position: absolute;
+        right: $half-gutter-width;
+        top: $half-gutter-width;
+    }
+}
+

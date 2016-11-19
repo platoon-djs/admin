@@ -1,0 +1,58 @@
+
+
+.default {
+    background: $color-white;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    &.withPadding {
+        padding-bottom: 3rem;
+    }
+}
+
+.content {
+    flex: 1 auto;
+    display: flex;
+    flex-direction: column;
+    background: $color-theme-two;
+    color: $color-white;
+}
+
+.overflow-container {
+    flex: 1 0 auto;
+    position: relative;
+}
+
+.left {
+    background: $color-theme-one;
+    border-right: 1px solid darken($color-theme-one, 2);
+    flex: 0 200px;
+    position: relative;
+}
+
+.left__wrapper, .overflow-container__wrapper {
+    position: absolute;
+    overflow: scroll;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.top {
+    flex: 0 auto;
+    background: $color-white;
+    color: $color-white;
+    min-height: 3rem;
+    padding: 0.25em;
+}
+
+.brand-logo {
+    img { display: block; height: 2em; }
+    padding: $half-gutter-width;
+    margin-bottom: $half-gutter-width;
+    margin-right: -1px;
+    height: 3rem;
+    background: $color-primary;
+}
+

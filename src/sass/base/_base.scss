@@ -1,0 +1,23 @@
+@import "reset";
+@import "typeography";
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.125rem;
+    min-height: 40px;
+    padding: 10px 28px;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    color: #000;
+    background-color: #eee;
+    border-radius: 4px;
+}

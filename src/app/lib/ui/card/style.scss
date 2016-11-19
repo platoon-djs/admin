@@ -1,0 +1,23 @@
+
+
+.card {
+    background: $color-white;
+    border-radius: 0.2rem;
+    flex: 1 auto;
+}
+
+.header {
+    border-bottom: 1px solid $color-gray;
+    h1, h2, h3 {
+        padding: 0.5rem 1rem;
+        margin: 0;
+    }
+}
+
+.body {
+    padding: 1rem;
+    h1, h2, h3 {
+        margin-top: 0;
+    }
+}
+

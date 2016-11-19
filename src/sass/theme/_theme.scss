@@ -1,0 +1,22 @@
+@import "../kube/mixins";
+@import "colors";
+
+$gutter-width: 1rem;
+$outer-margin: 2rem;
+$gutter-compensation: $gutter-width * 0.5 * -1;
+$half-gutter-width: $gutter-width * 0.5;
+$xs-min: 30;
+$sm-min: 48;
+$md-min: 64;
+$lg-min: 75;
+$screen-xs-min: $xs-min * 1em;
+$screen-sm-min: $sm-min * 1em;
+$screen-md-min: $md-min * 1em;
+$screen-lg-min: $lg-min * 1em;
+$container-sm: $sm-min + $gutter-width;
+$container-md: $md-min + $gutter-width;
+$container-lg: $lg-min + $gutter-width;
+
+$base-spacing-unit: 1rem;
+$half-spacing-unit: 0.5rem;
+
