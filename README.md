@@ -2,7 +2,7 @@
 
 WIP: Sat Nov 19 2016
 
-> Standalone frontend module for frontend code
+> Standalone module for frontend code
 
 ## Install
 
@@ -13,11 +13,11 @@ $ yarn install
 ## Start
 
 ```bash
-npm start
+$ npm start
 ```
 
 Will start dev server at `http://localhost:8080`
 
 ## About
 
-The module uses React for its Viewlayer and Webpack as its build tool
+The module uses React for its viewlayer and Webpack as its build tool
