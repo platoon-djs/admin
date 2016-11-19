@@ -1,0 +1,15 @@
+
+
+
+.menu__item {
+    margin-bottom: 0.2rem;
+}
+
+.menu__item-link {
+    color: #c5c5c5;
+    .menu__item--active & {
+        background: $color-theme-one;
+        padding-left: 10px;
+        border-left: none;
+    }
+}

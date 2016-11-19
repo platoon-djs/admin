@@ -1,17 +1,14 @@
-import factory from '../factory'
 import React from 'react'
+import factory from '../factory'
 import { themr } from 'react-css-themr'
 import assign from 'lodash/assign'
 import cn from 'classnames'
 import style from './style.scss'
 
-export const CardHeader = factory('UiCardHeader', 'header', style)
-export const CardBody = factory('UiCardHeader', 'body', style)
-
-const cardFactory = () => {
-  const Card = ({
+const tagFactory = () => {
+  const Tag = ({
     theme,
-    title,
+    label,
     primary,
     info,
     danger,
@@ -19,36 +16,31 @@ const cardFactory = () => {
     warning,
     className,
     children,
+    onClick,
     ...other
   }) => {
-    const head = title && (
-      <CardHeader>
-        <h4>{ title }</h4>
-      </CardHeader>
-    )
-
     const cls = cn(
-      theme.card,
+      theme.tag,
       className,
       primary && theme.primary,
       info && theme.info,
       danger && theme.danger,
       success && theme.success,
-      warning && theme.warning
+      warning && theme.warning,
+      onClick && theme.clickable
     )
-
     const props = assign(other, {
+      onClick,
       className: cls
-    })
+    }, onClick && { href: '' })
 
-    return React.createElement('div', props,
-      head,
+    return React.createElement(onClick ? 'a' : 'span', props,
+      label,
       children
     )
   }
 
-  return Card
+  return Tag
 }
 
-export default themr('UiCard', style)(cardFactory())
-
+export default themr('UiTag', style)(tagFactory())

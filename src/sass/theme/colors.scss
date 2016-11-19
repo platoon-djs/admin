@@ -22,8 +22,10 @@ $color-black:  #111111;
 
 $color-primary: $color-blue;
 $color-danger:  $color-red;
-$color-sucess:  $color-green;
+$color-success: $color-green;
 $color-info:    $color-aqua;
+$color-warning: $color-yellow;
+$color-default: $color-gray;
 
 /*
 $color-theme-one:   #212121;
@@ -36,6 +38,8 @@ $color-theme-one:   #282930;
 $color-theme-two:   #2F323B;
 $color-theme-three: #24262D;
 $color-theme-four:  #515151;
+
+$color-theme-text: lighten($color-theme-two, 35);
 
 $color-theme-accent: $color-blue;
 

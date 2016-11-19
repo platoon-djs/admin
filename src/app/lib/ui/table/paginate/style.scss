@@ -1,0 +1,34 @@
+
+
+.paginate {
+
+    padding: $gutter-width 0 0;
+
+    &.full {
+        width: 100%;
+        display: flex;
+    }
+
+    .button {
+        @include button($color-theme-text, $color-theme-one);
+        border-color: $color-theme-text;
+        padding: 6px 15px;
+
+        &.current {
+            @include button($color-theme-text, darken($color-theme-text, 30))
+        }
+    }
+}
+
+.paginate__left {
+    flex: 0 auto;
+    font-size: 1rem;
+    line-height: 32px;
+    color: $color-theme-text
+}
+
+.paginate__right {
+    text-align: right;
+    flex: 1 auto
+}
+

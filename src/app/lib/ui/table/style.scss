@@ -1,0 +1,24 @@
+
+.table {
+    margin: 0;
+    a {
+        text-decoration: none;
+        color: inherit;
+        &:hover { color: $color-white }
+    }
+    th {
+        white-space: nowrap;
+        border-top: none;
+        font-weight: bold;
+        padding-right: 2rem;
+    }
+    th, td {
+        padding: 0.25rem $half-gutter-width;
+        color: $color-theme-text;
+        border-bottom: 1px solid $color-theme-text;
+    }
+}
+
+.table__row {
+
+}

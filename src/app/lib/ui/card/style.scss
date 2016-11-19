@@ -1,21 +1,34 @@
 
 
 .card {
-    background: $color-white;
-    border-radius: 0.2rem;
+    background: darken($color-theme-one, 0);
+    border-radius: 0.1rem;
     flex: 1 auto;
+
+    &.primary .header { border-color: $color-primary }
+    &.info .header { border-color: $color-info }
+    &.warning .header { border-color: $color-warning }
+    &.danger .header { border-color: $color-danger }
+    &.success .header { border-color: $color-success }
 }
 
 .header {
-    border-bottom: 1px solid $color-gray;
-    h1, h2, h3 {
-        padding: 0.5rem 1rem;
+    background: darken($color-theme-one, 2);
+    border-bottom: 2px solid $color-default;
+
+    h1, h2, h3, h4 {
+        color: $color-white;
+        padding: $half-gutter-width $gutter-width;
         margin: 0;
+    }
+    h4 {
+        text-transform: uppercase;
+        font-size: 1rem;
     }
 }
 
 .body {
-    padding: 1rem;
+    padding: $gutter-width;
     h1, h2, h3 {
         margin-top: 0;
     }

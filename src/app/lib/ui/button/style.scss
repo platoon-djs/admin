@@ -1,0 +1,24 @@
+
+.button {
+    text-align: center;
+
+    @include button($color-white, $color-default)
+
+    &.primary {
+        @include button($color-white, $color-primary)
+    }
+    &.info {
+        @include button($color-white, $color-info)
+    }
+    &.danger {
+        @include button($color-white, $color-danger)
+    }
+    &.success {
+        @include button($color-white, $color-success)
+    }
+    &.warning {
+        @include button($color-white, $color-warning)
+    }
+}
+
+

@@ -1,0 +1,30 @@
+
+
+@mixin tag ($color) {
+    color: lighten($color, 40);
+    background-color: $color;
+    &:hover {
+        color: lighten($color, 30);
+        background-color: darken($color, 10);
+    }
+}
+
+.tag, a.tag {
+    min-width: 3rem;
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin-left: 3px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: inherit;
+    box-sizing: border-box;
+
+    @include tag($color-primary)
+
+    &.primary { @include tag($color-primary) }
+    &.info { @include tag($color-info) }
+    &.warning { @include tag($color-warning) }
+    &.danger { @include tag($color-danger) }
+    &.success { @include tag($color-success) }
+}
+

@@ -7,6 +7,12 @@ const route = store => ({
     require.ensure([], require => cb(null,
       getModule(require('./containers/Bookings'))
     ))
+  },
+
+  getIndexRoute (location, cb) {
+    require.ensure([], require => cb(null, [{
+      component: getModule(require('./containers/List'))
+    }]))
   }
 })
 

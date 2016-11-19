@@ -23,8 +23,8 @@ class Login extends Component {
     this.state = {
       hover: false,
       submitting: false,
-      username: { value: '', onChange: handleChange('username') },
-      password: { value: '', onChange: handleChange('password') }
+      username: { value: '', onChange: handleChange('username'), placeholder: 'Email' },
+      password: { value: '', onChange: handleChange('password'), placeholder: 'Password' }
     }
   }
 
@@ -61,9 +61,9 @@ class Login extends Component {
           <h4>Interweb log in</h4>
           <div className={styles.form}>
             <form action='' className='form' onSubmit={handleSubmit}>
-              <input type='text' className={styles.input} placeholder='Email' {...username} />
+              <input type='text' className={styles.input} {...username} />
               <span className={styles.password}>
-                <input type='password' className={styles.input} placeholder='Password' {...password} />
+                <input type='password' className={styles.input} {...password} />
                 <a href='/forgot'>Forgot?</a>
               </span>
               <button
@@ -81,12 +81,6 @@ class Login extends Component {
                   </div>
                 ) }
               </button>
-              { /*
-              <label className='form-item checkbox'>
-                <input type='checkbox' />
-                Remember email
-              </label>
-              */ }
             </form>
           </div>
         </div>
